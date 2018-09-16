@@ -4,6 +4,22 @@ button {
     height: 62px;
     vertical-align: middle;
     border: none;
+    background-color: #111110;
+
+}
+
+body {
+	background-color: #3d372f;
+}
+
+#num1, #num2, #num3, #num4, #num5, #num6, #num7, #num8, #num9, #zero,
+#divide, #multiply, #subtract, #add, #equals, #decimal, #clear, #undo,
+#plusOrMinus, #percent {
+	color: white;
+}
+
+#divide, #multiply, #subtract, #add, #equals {
+	background-color: #f78c00;
 }
 
 #screen {
@@ -21,6 +37,7 @@ button {
     text-align: right;
     margin: 0px 10px 10px 15px;
     color: white;
+    background-color: black;
     
 }
 
@@ -40,8 +57,10 @@ button {
 	display: flex;
     flex-direction: column;
     max-width: 300px;
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 2%;
 }
 
 .container {
