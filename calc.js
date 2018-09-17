@@ -6,6 +6,7 @@ const thirdDiv = document.querySelector('#thirdRow');
 const fourthDiv = document.querySelector('#fourthRow');
 const fifthDiv = document.querySelector('#fifthRow');
 const display = document.querySelector('.display');
+const getNumbers = document.querySelectorAll('.numbers');
 
 
 
@@ -15,16 +16,19 @@ result.textContent = "0";
 const num7 = document.createElement('button');
 firstDiv.appendChild(num7);
 num7.setAttribute('id', 'num7');
+num7.classList.add('numbers')
 num7.textContent = "7";
 
 const num8 = document.createElement('button');
 firstDiv.appendChild(num8);
 num8.setAttribute('id', 'num8');
+num8.classList.add('numbers');
 num8.textContent = "8";
 
 const num9 = document.createElement('button');
 firstDiv.appendChild(num9);
 num9.setAttribute('id', 'num9');
+num9.classList.add('numbers');
 num9.textContent = "9";
 
 const divide = document.createElement('button');
@@ -35,16 +39,19 @@ divide.textContent = "/";
 const num4 = document.createElement('button');
 secondDiv.appendChild(num4);
 num4.setAttribute('id', 'num4');
+num4.classList.add('numbers');
 num4.textContent = "4";
 
 const num5 = document.createElement('button');
 secondDiv.appendChild(num5);
 num5.setAttribute('id', 'num5')
+num5.classList.add('numbers')
 num5.textContent = "5";
 
 const num6 = document.createElement('button');
 secondDiv.appendChild(num6);
 num6.setAttribute('id', 'num6');
+num6.classList.add('numbers')
 num6.textContent = "6";
 
 const mult = document.createElement('button');
@@ -55,21 +62,25 @@ mult.textContent = "*";
 const num1 = document.createElement('button');
 thirdDiv.appendChild(num1);
 num1.setAttribute('id', 'num1');
+num1.classList.add('numbers');
 num1.textContent = "1";
 
 const num2 = document.createElement('button');
 thirdDiv.appendChild(num2);
 num2.setAttribute('id', 'num2');
+num2.classList.add('numbers');
 num2.textContent = "2";
 
 const num3 = document.createElement('button');
 thirdDiv.appendChild(num3);
 num3.setAttribute('id', 'num3');
+num3.classList.add('numbers');
 num3.textContent = "3";
 
 const zero = document.createElement('button');
 fourthDiv.appendChild(zero);
 zero.setAttribute('id', 'zero')
+zero.classList.add('numbers');
 zero.textContent = "0";
 
 const minus = document.createElement('button');
@@ -133,7 +144,24 @@ function screenClear() {
 	calculation.textContent = "0";
 }
 
-function operate(operator, num1, num2) {
-	
-}
+document.querySelectorAll('.numbers').forEach((element) => {
+  element.addEventListener('click', (event) => {
+    console.log(event.target);
+    if(event.target === 1) {
+    	return result.textContent = 1;
+    }
+  });
+})
+
+
+
+
+/*function operate(operator, num1, num2) {
+	operator = "";
+	num1 = "";
+	num2 = "";
+
+	if (operator === "+") {return add(a,b);}
+	if (operator ===)*/
+
 
