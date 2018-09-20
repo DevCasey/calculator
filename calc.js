@@ -83,6 +83,18 @@ function appendToDom(element, number) {
 
 // ----------------------------------------------------------------
 
+
+let currentNumb = document.querySelector('.container');
+currentNumb.addEventListener('click', function(e) {
+	if (e.target && e.target.matches('.numbers')) {
+		console.log(e.target.textContent);
+	}
+});
+
+
+
+
+
 function operate(operator, number1, number2) {
 	document.querySelectorAll('.numbers').forEach((element) => {
 		if (operator === "+") {return addition(a,b);}
@@ -108,16 +120,22 @@ function division(a,b) {
 	return a/b;
 }
 
+
 let clearDisplay = document.querySelector('#clear');
 clearDisplay.addEventListener('click', (event) => {
 	result.textContent = "0";
 })
+
 
 document.querySelectorAll('.numbers').forEach((element) => {
   element.addEventListener('click', (event) => {
   	result.textContent = event.target.textContent;
   });
 })
+
+function operator(a,b,operate) {
+
+}
 
 
 
